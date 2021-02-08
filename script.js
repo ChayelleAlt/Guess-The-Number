@@ -16,14 +16,8 @@ function generateSecretNumber() {
     return Math.trunc(Math.random() * 20) + 1;
 }
 function setBackgroundColor(color) {
-    if (type === 'won') {
-        document.querySelector('body').style.backgroundColor = '#60b347';
-    }
-    else if (type === 'reset') {
-        document.querySelector('body').style.backgroundColor = '#222';
 
-    }
-    document.querySelector('body').style.backgroundColor = '#' + 'color';
+    document.querySelector('body').style.backgroundColor = color;
 
 }
 
@@ -55,7 +49,7 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.number').textContent = secretNumber;
 
             //manipulates styles:
-            setBackgroundColor('won');
+            setBackgroundColor("'#60b347'");
 
             document.querySelector('.number').style.width = '30rem';
 
@@ -84,7 +78,7 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.number').textContent = '?';
     displayMessage('Start guessing...');
     //reset styles:
-    setBackgroundColor('reset');
+    setBackgroundColor("'#222'");
     document.querySelector('.number').style.width = '15rem';
 
 
