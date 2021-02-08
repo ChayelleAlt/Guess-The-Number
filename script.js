@@ -15,11 +15,6 @@ function displayMessage(message) {
 function generateSecretNumber() {
     return Math.trunc(Math.random() * 20) + 1;
 }
-function setBackgroundColor(color) {
-
-    document.querySelector('body').style.backgroundColor = color;
-
-}
 
 
 //onclick even listener
@@ -36,7 +31,8 @@ document.querySelector('.check').addEventListener('click', function () {
         }
         //When guess is wrong
         else if (guess != secretNumber) {
-            document.querySelector('.message').textContent = guess > secretNumber ? 'Guess Lower!' : 'Guess Higher';
+            // document.querySelector('.message').textContent = guess > secretNumber ? 'Guess Lower!' : 'Guess Higher';
+            displayMessage(guess > secretNumber ? 'Guess Lower!' : 'Guess Higher');
             score--;
             document.querySelector('.score').textContent = score;
         }
@@ -49,7 +45,8 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.number').textContent = secretNumber;
 
             //manipulates styles:
-            setBackgroundColor("'#60b347'");
+            document.querySelector('body').style.backgroundColor = '#60b347';
+
 
             document.querySelector('.number').style.width = '30rem';
 
@@ -78,7 +75,7 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.number').textContent = '?';
     displayMessage('Start guessing...');
     //reset styles:
-    setBackgroundColor("'#222'");
+    document.querySelector('body').style.backgroundColor = '#222';
     document.querySelector('.number').style.width = '15rem';
 
 
