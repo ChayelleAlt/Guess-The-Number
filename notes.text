@@ -1,0 +1,14 @@
+DOM: Document Object Model:
+Structured representation of HTML documents allows JavaScript to access HTML elements and styles to manipulate them.
+
+Selects the element and then reads the text
+Operated left to righ, first message and then text
+console.log(document.querySelector('.message').textContent);
+document.querySelector('.message').textContent = 'Correct Number!';
+
+document.querySelector('.number').textContent = 10;
+document.querySelector('.score').textContent = 20;
+
+Manipulating input tag - use .value 
+document.querySelector('.guess').value = 23;
+console.log(document.querySelector('.guess').value);
