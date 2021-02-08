@@ -17,7 +17,7 @@ function generateSecretNumber() {
 }
 function setBackgroundColor(color) {
     if (type === 'won') {
-        document.querySelector('body').style.backgroundColor = '#60b34';
+        document.querySelector('body').style.backgroundColor = '#60b347';
     }
     else if (type === 'reset') {
         document.querySelector('body').style.backgroundColor = '#222';
